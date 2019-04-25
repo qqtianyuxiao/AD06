@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">数据库连接操作</string>
+
+    <string name="edt2">请输入用户名</string>
+    <string name="edt3">请输入密码</string>
+
+    <string name="tv1">用户名：</string>
+    <string name="tv2">密  码：</string>
+    <string name="tv3">性  别：</string>
+    <string name="tv4">是否有效：</string>
+    <string name="tv5">ID：</string>
+    <string name="tv6">查询结果：</string>
+
+
+    <string name="btn1">添加数据</string>
+    <string name="btn2">全部显示</string>
+    <string name="btn3">清除显示</string>
+    <string name="btn4">全部删除</string>
+
+    <string name="btn5">ID删除</string>
+    <string name="btn6">ID查询</string>
+    <string name="btn7">ID更新</string>
+
+    <string name="rb1">男</string>
+    <string name="rb2">女</string>
+
+    <string name="rb3">是</string>
+    <string name="rb4">否</string>
+</resources>
