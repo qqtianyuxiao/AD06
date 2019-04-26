@@ -54,7 +54,7 @@ public class User {
         result += "用户名：" + this.Name + "，";
         result += "密码：" + this.pwd + "， ";
         result += "性别：" + this.sexy + "，";
-        if(this.isused){
+        if(this.isused==true){
             result += "是否有效：是";
         }else{
             result += "是否有效：否";

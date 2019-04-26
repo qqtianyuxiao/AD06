@@ -83,7 +83,7 @@ public class DBAdapter {
             users[i].Name = cursor.getString(cursor.getColumnIndex(KEY_NAME));
             users[i].pwd = cursor.getString(cursor.getColumnIndex(KEY_PWD));
             users[i].sexy = cursor.getString(cursor.getColumnIndex(KEY_SEXY));
-            users[i].isused=cursor.isNull(cursor.getColumnIndex(KEY_ISUSED));
+            users[i].isused=cursor.getInt(cursor.getColumnIndex(KEY_ISUSED))==1?true:false;
 
             cursor.moveToNext();
         }
@@ -117,7 +117,7 @@ public class DBAdapter {
 
         private static final String DB_CREATE = "create table " +
                 DB_TABLE + " (" + KEY_ID + " integer primary key autoincrement, " +
-                KEY_NAME+ " text not null, " + KEY_PWD+ " text not null," + KEY_SEXY + " text not null,"+KEY_ISUSED + " integer);";
+                KEY_NAME+ " text not null, " + KEY_PWD+ " text not null," + KEY_SEXY + " text not null,"+KEY_ISUSED + " boolean);";
 
         @Override
         public void onCreate(SQLiteDatabase _db) {
