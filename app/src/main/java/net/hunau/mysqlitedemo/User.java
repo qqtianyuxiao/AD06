@@ -1,11 +1,11 @@
 package net.hunau.mysqlitedemo;
 
 public class User {
-    public int ID = -1;
-    public String Name;
-    public String pwd;
-    public String sexy;
-    public boolean isused;
+    private int ID = -1;
+    private String Name;
+    private String pwd;
+    private String sexy;
+    private boolean isused;
 
     public int getID() {
         return ID;
