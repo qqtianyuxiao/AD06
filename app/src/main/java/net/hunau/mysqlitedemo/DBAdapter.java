@@ -50,10 +50,10 @@ public class DBAdapter {
     public long insert(User user) {
         ContentValues newValues = new ContentValues();
 
-        newValues.put(KEY_NAME, user.Name);
-        newValues.put(KEY_PWD, user.pwd);
-        newValues.put(KEY_SEXY, user.sexy);
-        newValues.put(KEY_ISUSED, user.isused);
+        newValues.put(KEY_NAME, user.getName());
+        newValues.put(KEY_PWD, user.getPwd());
+        newValues.put(KEY_SEXY, user.getSexy());
+        newValues.put(KEY_ISUSED, user.isIsused());
 
         return db.insert(DB_TABLE, null, newValues);
     }
@@ -79,11 +79,11 @@ public class DBAdapter {
         User[] users = new User[resultCounts];
         for (int i = 0 ; i<resultCounts; i++){
             users[i] = new User();
-            users[i].ID = cursor.getInt(0);
-            users[i].Name = cursor.getString(cursor.getColumnIndex(KEY_NAME));
-            users[i].pwd = cursor.getString(cursor.getColumnIndex(KEY_PWD));
-            users[i].sexy = cursor.getString(cursor.getColumnIndex(KEY_SEXY));
-            users[i].isused=cursor.getInt(cursor.getColumnIndex(KEY_ISUSED))==1?true:false;
+            users[i].setID(cursor.getInt(0));
+            users[i].setName(cursor.getString(cursor.getColumnIndex(KEY_NAME)));;
+            users[i].setPwd(cursor.getString(cursor.getColumnIndex(KEY_PWD)));
+            users[i].setSexy(cursor.getString(cursor.getColumnIndex(KEY_SEXY)));
+            users[i].setIsused(cursor.getInt(cursor.getColumnIndex(KEY_ISUSED))==1?true:false);//cursor.getInt(cursor.getColumnIndex(KEY_ISUSED))==1?true:false;
 
             cursor.moveToNext();
         }
@@ -100,10 +100,10 @@ public class DBAdapter {
 
     public long updateOneData(long id , User users){
         ContentValues updateValues = new ContentValues();
-        updateValues.put(KEY_NAME, users.Name);
-        updateValues.put(KEY_PWD, users.pwd);
-        updateValues.put(KEY_SEXY, users.sexy);
-        updateValues.put(KEY_ISUSED,users.isused);
+        updateValues.put(KEY_NAME, users.getName());
+        updateValues.put(KEY_PWD, users.getPwd());
+        updateValues.put(KEY_SEXY, users.getSexy());
+        updateValues.put(KEY_ISUSED,users.isIsused());
 
         return db.update(DB_TABLE, updateValues,  KEY_ID + "=" + id, null);
     }
