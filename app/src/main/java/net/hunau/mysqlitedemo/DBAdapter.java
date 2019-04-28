@@ -9,15 +9,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 public class DBAdapter {
-    private static final String DB_NAME = "user.db";
-    private static final String DB_TABLE = "tb_user";
-    private static final int DB_VERSION = 1;
+    private  final String DB_NAME = "user.db";
+    private  final String DB_TABLE = "tb_user";
+    private  final int DB_VERSION = 1;
 
-    public static final String KEY_ID = "id";
-    public static final String KEY_NAME = "name";
-    public static final String KEY_PWD = "pwd";
-    public static final String KEY_SEXY = "sexy";
-    public static final String KEY_ISUSED = "isused";
+    public  final String KEY_ID = "id";
+    public  final String KEY_NAME = "name";
+    public  final String KEY_PWD = "pwd";
+    public  final String KEY_SEXY = "sexy";
+    public  final String KEY_ISUSED = "isused";
 
     private SQLiteDatabase db;
     private final Context context;
@@ -109,13 +109,13 @@ public class DBAdapter {
     }
 
     /** 静态Helper类，用于建立、更新和打开数据库*/
-    private static class DBOpenHelper extends SQLiteOpenHelper {
+    private  class DBOpenHelper extends SQLiteOpenHelper {
 
         public DBOpenHelper(Context context, String name, CursorFactory factory, int version) {
             super(context, name, factory, version);
         }
 
-        private static final String DB_CREATE = "create table " +
+        private  final String DB_CREATE = "create table " +
                 DB_TABLE + " (" + KEY_ID + " integer primary key autoincrement, " +
                 KEY_NAME+ " text not null, " + KEY_PWD+ " text not null," + KEY_SEXY + " text not null,"+KEY_ISUSED + " boolean);";
 
