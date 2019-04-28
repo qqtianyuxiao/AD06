@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">数据库连接操作</string>
+    <string name="app_name">数据库-周博</string>
 
     <string name="edt2">请输入用户名</string>
     <string name="edt3">请输入密码</string>
