@@ -1,60 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-    <RelativeLayout android:id="@+id/RelativeLayout01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
-        <EditText android:id="@+id/name"
-            android:text=""
-            android:layout_width="280dip"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="10dip" >
-        </EditText>
-        <TextView android:id="@+id/name_label"
-            android:text="@string/tv1"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_toRightOf="@id/name"
-            android:layout_alignBaseline="@+id/name">
-        </TextView>
+            android:layout_alignBaseline="@+id/name"
+            android:text="@string/tv1"></TextView>
 
-        <EditText android:id="@+id/pwd"
-            android:text=""
+        <EditText
+            android:id="@+id/name"
             android:layout_width="280dip"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_marginLeft="10dip"
-            android:layout_below="@id/name"
-            android:numeric="integer">
-        </EditText>
-        <TextView android:id="@+id/pwd_label"
-            android:text="@string/tv2"
+            android:text=""></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pwd_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_toRightOf="@id/pwd"
-            android:layout_alignBaseline="@+id/pwd" >
-        </TextView>
+            android:layout_alignBaseline="@+id/pwd"
+            android:text="@string/tv2"></TextView>
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="280dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:numeric="integer"
+            android:text=""></EditText>
+    </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout02"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sexy_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv3">
+            <!--android:layout_alignBaseline="@+id/sexy"
+            android:layout_toRightOf="@id/sexy">-->
+        </TextView>
 
         <RadioGroup
             android:id="@+id/RadioGroup01"
             android:layout_width="279dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <RadioButton
@@ -62,36 +74,35 @@
                 android:layout_width="121dp"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/rb1">
-            </RadioButton>
+                android:text="@string/rb1"></RadioButton>
 
             <RadioButton
                 android:id="@+id/RadioButton02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rb2">
-            </RadioButton>
+                android:text="@string/rb2"></RadioButton>
         </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <TextView
-            android:id="@+id/sexy_label"
-            android:text="@string/tv3"
+            android:id="@+id/isused_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true">
+            android:text="@string/tv4">
             <!--android:layout_alignBaseline="@+id/sexy"
             android:layout_toRightOf="@id/sexy">-->
         </TextView>
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/RelativeLayout03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <RadioGroup
             android:id="@+id/RadioGroup02"
             android:layout_width="279dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <RadioButton
@@ -99,111 +110,125 @@
                 android:layout_width="121dp"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/rb3">
-            </RadioButton>
+                android:text="@string/rb3"></RadioButton>
 
             <RadioButton
                 android:id="@+id/RadioButton04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rb4">
-            </RadioButton>
+                android:text="@string/rb4"></RadioButton>
         </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dip"
+            android:text="@string/btn1"></Button>
+
+        <Button
+            android:id="@+id/query_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dip"
+            android:text="@string/btn2"></Button>
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dip"
+            android:text="@string/btn3"></Button>
+
+        <Button
+            android:id="@+id/delete_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dip"
+            android:text="@string/btn4"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
-            android:id="@+id/isused_label"
-            android:text="@string/tv4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true">
-            <!--android:layout_alignBaseline="@+id/sexy"
-            android:layout_toRightOf="@id/sexy">-->
-        </TextView>
-    </RelativeLayout>
-    <LinearLayout android:id="@+id/LinearLayout02"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <Button android:id="@+id/add"
-            android:text="@string/btn1"
-            android:layout_width="wrap_content"
+            android:padding="3dip"
+            android:text="@string/tv5"></TextView>
+
+        <EditText
+            android:id="@+id/id_entry"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:padding = "5dip"
-            android:layout_weight="1">
-        </Button>
-        <Button android:id="@+id/query_all"
-            android:text="@string/btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding = "5dip"
-            android:layout_weight="1">
-        </Button>
-        <Button android:id="@+id/clear"
-            android:text="@string/btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding = "5dip"
-            android:layout_weight="1">
-        </Button>
-        <Button	android:id="@+id/delete_all"
-            android:text="@string/btn4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding = "5dip"
-            android:layout_weight="1">
-        </Button>
+            android:layout_weight="1"
+            android:padding="3dip"></EditText>
+
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/LinearLayout03"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <TextView android:text="@string/tv5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding = "3dip">
-        </TextView>
-        <EditText android:id="@+id/id_entry"
-            android:layout_width="50dip"
-            android:layout_height="wrap_content"
-            android:padding = "3dip"
-            android:layout_weight="1">
-        </EditText>
-        <Button android:id="@+id/delete"
-            android:text="@string/btn5"
-            android:layout_width="50dip"
-            android:layout_height="wrap_content"
-            android:padding = "3dip"
-            android:layout_weight="1">
-        </Button>
-        <Button android:id="@+id/query"
-            android:text="@string/btn6"
-            android:layout_width="50dip"
-            android:layout_height="wrap_content"
-            android:padding = "3dip"
-            android:layout_weight="1">
-        </Button>
-        <Button android:id="@+id/update"
-            android:text="@string/btn7"
-            android:layout_width="50dip"
-            android:layout_height="wrap_content"
-            android:padding = "3dip"
-            android:layout_weight="1">
-        </Button>
-    </LinearLayout>
-
-    <TextView android:id="@+id/label"
-        android:text="@string/tv6"
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    </TextView>
-    <ScrollView  android:layout_width="fill_parent"
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:text="@string/btn5"></Button>
+
+        <Button
+            android:id="@+id/query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:text="@string/btn6"></Button>
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="3dip"
+            android:text="@string/btn7"></Button>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv6"></TextView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <LinearLayout android:layout_width="fill_parent"
+
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView android:id="@+id/display"
-                android:text=""
+
+            <TextView
+                android:id="@+id/display"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </TextView>
+                android:layout_height="wrap_content"
+                android:text=""></TextView>
         </LinearLayout>
     </ScrollView>
 
