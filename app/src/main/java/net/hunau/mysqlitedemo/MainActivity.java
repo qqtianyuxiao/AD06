@@ -12,13 +12,12 @@ import android.widget.RadioButton;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    final static String TAG = "系统调试";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String msg;
-        long id;
+
         final EditText nameText = (EditText) findViewById(R.id.name);
         final EditText pwdText = (EditText) findViewById(R.id.pwd);
         final EditText idEntry = (EditText) findViewById(R.id.id_entry);
@@ -28,9 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         final RadioButton rb1 = (RadioButton) findViewById(R.id.RadioButton01);
         final RadioButton rb2 = (RadioButton) findViewById(R.id.RadioButton02);
-
         final RadioButton rb3 = (RadioButton) findViewById(R.id.RadioButton03);
-        final RadioButton rb4 = (RadioButton) findViewById(R.id.RadioButton04);
 
         Button addButton = (Button) findViewById(R.id.add);
         Button queryAllButton = (Button) findViewById(R.id.query_all);
@@ -131,7 +128,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         return;
                 }
-            }};
+            }
+        };
         addButton.setOnClickListener(buttonListener);
         queryAllButton.setOnClickListener(buttonListener);
         clearButton.setOnClickListener(buttonListener);
@@ -139,5 +137,5 @@ public class MainActivity extends AppCompatActivity {
         queryButton.setOnClickListener(buttonListener);
         deleteButton.setOnClickListener(buttonListener);
         updateButton.setOnClickListener(buttonListener);
-        }
+    }
 }
